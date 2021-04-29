@@ -1,0 +1,26 @@
+1.	public class Triangulo extends Figura {
+2.	 
+3.	    double base ,altura,area;
+4.	    public void AreaTriangulo(){
+5.	        base=Double.parseDouble(JOptionPane.showInputDialog("dame base"));
+6.	        altura=Integer.parseInt(JOptionPane.showInputDialog("dame altura"));
+7.	        area=(base*altura)/2;
+8.	 
+9.	    }
+10.	    public void setArea(double v_area){
+11.	 
+12.	    area=v_area;
+13.	 
+14.	}
+15.	 
+16.	public void setPerimetro(double v_perimetro){
+17.	    perimetro=v_perimetro;
+18.	}
+19.	public double  getArea(){
+20.	    return area;
+21.	}
+22.	public double getPerimetro(){
+23.	    return perimetro;
+24.	}
+25.	}
+
