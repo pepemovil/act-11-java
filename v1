@@ -1,0 +1,158 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+import java.lang.*											;
+import java.io.*											;
+ 
+public	class	Test											{
+	public	static	void	main		(	String	[]	args				){
+		Teclado	instancia		=	new 	Teclado			(		);
+		String	Figura										;
+		double	LadoORadio								,
+			area										;
+ 
+		do											{
+			System.out.println	(	"	Introduce el Valor de la Figura:"
+							+"\n(T)riangulo, (R)enctangulo cuadrado "
+							+", (C)irculo y (S)alir:			");
+			Figura			=	instancia.Lee_String		(		);
+			System.out.println(Figura);
+			if	(	Figura.equals("T"						)){
+				System.out.println
+						(	"	Introduce el valor de la base:"		);
+				double base	=	Double.parseDouble		(
+								instancia.Lee_String	(		));
+				System.out.println
+						(	"	Introduce el valor de la altura:"	);
+				double altura	=	Double.parseDouble		(
+								instancia.Lee_String	(		));
+				Triangulo_ABS	Triangulo
+						=	new	Triangulo_ABS		(		);
+				System.out.println
+						(	"	El area del triangulo es:		"
+							+Triangulo.getArea		(	altura	,
+												base	));
+				System.out.println
+						(	"	El perimetro del triangulo esta pendiente");
+			}else
+				if	(	Figura.equals("R"					)){
+					System.out.println
+						(	"	El area de un rectrangulo y un cuadro "
+							+	"son las mismas operaciones		");
+					System.out.println
+						(	"	Introduce el valor de la base:		");
+					double base
+						=	Double.parseDouble		(
+								instancia.Lee_String	(		));
+					System.out.println
+						(	"	Introduce el valor de la altura:"	);
+					double altura
+						=	Double.parseDouble		(
+								instancia.Lee_String	(		));
+					Rectangulo_ABS	Rectangulo
+						=	new	Rectangulo_ABS		(		);
+					System.out.println
+						(	"	El area del Rectangulo es:		"
+							+Rectangulo.getArea		(	altura	,
+												base	));
+					System.out.println
+						(	"	El perimetro del Rectangulo es :	"
+							+Rectangulo.getPerimetro	(		));
+				}else
+					if	(	Figura.equals("C"				)){
+						System.out.println
+						(	"	Introduce el valor del radio:		");
+						double radio
+						=	Double.parseDouble		(
+								instancia.Lee_String	(		));
+						Circulo_ABS	Circulo
+						=	new	Circulo_ABS		(		);
+						System.out.println
+						(	"	El area del Circulo es:		"
+							+Circulo.getArea		(	radio	));
+						System.out.println
+						(	"	El perimetro del Circulo es :	"
+							+Circulo.getPerimetro		(		));
+					}
+					else
+						System.out.println
+						(	"	Error en la figura seleccionada		");
+		}	while	(	!Figura.equals("S"						));
+	}
+}
